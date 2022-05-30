@@ -20,8 +20,12 @@ function Scoring(number){
         for(let i =0;i<lscore.length;i++){
             score[lscore[i]-1] += 1;
         }
-        console.log(score)
-        
+
+        let numbar = (number/list.length )*100
+
+        let pbb= document.querySelector(".pbb")
+        pbb.style.width=number*10+"%"
+        pbb.setAttribute("aria-valuenow",number)
         Qna(number+1) 
        
     })
@@ -56,6 +60,7 @@ function Result(){
 
 function Qna(number){
     if(number == list.length){
+        
         Result()
     }
     else{
