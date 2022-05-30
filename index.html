@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  </head>
+  <body>
+    <div>
+      <div class="head">
+        <img src="/resources/logo.png" onclick="window.location.reload()" style="width: 90%" />
+      </div>
+      <div class="main">
+        <div class="test" style="display: none">
+          <div>
+            <div class="question"></div>
+            <img src="/resources/main.jpg" style="margin: 8px" />
+            <div class="d-grid gap-2 col-6 mx-auto answer">
+
+              
+            </div>
+            <button class="btn btn-danger next" type="button">
+              다음
+            </button>
+          </div>
+        </div>
+        <div class="result" style="display: none">
+          <div>당신이 만화 캐릭터라면?</div>
+          <br>
+          <img src="" class="result-img" />
+          
+          <div class="charname"></div>
+          <div class="chardsc"></div>
+          <div style="margin: 30px;">
+            <a
+            id="btnTwitter"
+            class="link-icon twitter"
+            href="javascript:shareTwitter();"
+            ><img src="./resources/icon-twitter.png"></a
+          >
+          <a
+            id="btnFacebook"
+            class="link-icon facebook"
+            href="javascript:shareFacebook();"
+            ><img src="./resources/icon-facebook.png"></a
+          >
+          <a
+            id="btnKakao"
+            class="link-icon kakao"
+            href="javascript:shareKakao();"
+            ><img src="./resources/icon-kakao.png"></a
+          >
+          <p style="margin:5px; font-size: small;">친구들과 공유하고 즐겨보아요</p>
+          </div>
+          
+        </div>
+        <button
+          type="button"
+          class="btn btn-primary btn-lg start-btn"
+          onclick="Start_qna()"
+        >
+          테스트 시작
+        </button>
+      </div>
+    </div>
+    <hr>
+    <p style="text-align: center; font-size: 5px; color:rgb(150, 150, 150)">Copyright ⓒ 2022 jinhyuk All rights reserved.</p>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/main.js"></script>
+  <script src="js/data.js"></script>
+</html>

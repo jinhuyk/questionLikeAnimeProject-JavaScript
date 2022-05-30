@@ -1,0 +1,42 @@
+.head {
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+}
+
+.main {
+    text-align: center;
+}
+
+.test {
+    margin: 30px;
+}
+.answer {
+    margin: 2px;
+}
+
+.result-img {
+    width:200px;
+}
+
+.question {
+    margin: 5px;
+    font-size: larger;
+    font-weight: bolder;
+    border: 2px solid black;
+    border-radius: 6px;
+    padding: 20px;
+}
+.result {
+    font-size: larger;
+    font-weight: bolder;
+    margin: 30px;
+}
+.charname {
+    font-weight: bold;
+    font-size: x-large;
+    margin: 6px;
+}
+.chardsc {
+    font-size: medium;
+}
