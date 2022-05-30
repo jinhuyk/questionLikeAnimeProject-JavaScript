@@ -97,7 +97,7 @@ function shareFacebook() {
 function shareKakao() {
  
     // 사용할 앱의 JavaScript 키 설정
-    Kakao.init('	d24bd3606409edd0534f1456134d8ede');
+    Kakao.init('a115a9bb453645c03a291f92a524c7e4');
    
     // 카카오링크 버튼 생성
     Kakao.Link.createDefaultButton({
@@ -106,10 +106,10 @@ function shareKakao() {
       content: {
         title: "만화캐릭터테스트", // 보여질 제목
         description: "내가 만약 만화캐릭터라면?", // 보여질 설명
-        imageUrl: "https://characterandyou.netlify.app/", // 콘텐츠 URL
+        imageUrl: "https://characterandyou.netlify.app", // 콘텐츠 URL
         link: {
-           mobileWebUrl: "https://characterandyou.netlify.app/",
-           webUrl: "https://characterandyou.netlify.app/"
+           mobileWebUrl: "https://characterandyou.netlify.app",
+           webUrl: "https://characterandyou.netlify.app"
         }
       }
     });
