@@ -8,24 +8,17 @@ let answer = document.querySelector(".answer")
 let pn = document.querySelectorAll(".prev-next")
 let start_btn = document.querySelector(".start-btn")
 let result = document.querySelector(".result")
-let mm = 0;
+
 function Scoring(number){
     
-    $(document).on("click","#ansbtn",function(e){
+    $(document).on("click","#ansbtn",function(){
         
-        if($(this).index() != -1){
-            mm = $(this).index()
-        }
-        let lscore = list[number].ans[mm].score
+        let lscore = list[number].ans[$(this).index()].score
         for(let i =0;i<lscore.length;i++){
             score[lscore[i]-1] += 1;
         }
 
-        let numbar = (number/list.length )*100
 
-        let pbb= document.querySelector(".pbb")
-        pbb.style.width=number*10+"%"
-        pbb.setAttribute("aria-valuenow",number)
         Qna(number+1) 
        
     })
@@ -59,11 +52,16 @@ function Result(){
 }
 
 function Qna(number){
-    if(number == list.length){
+    if(number+1 == list.length){
         
         Result()
     }
     else{
+
+        let numbar = 100- ((list.length-(number+1) )/list.length *100)
+        let pbb= document.querySelector(".pbb")
+        pbb.style.width=numbar+"%"
+        pbb.setAttribute("aria-valuenow",numbar)
         question.innerText = list[number].qt
         var stbtn=""
         for(let i = 0;i<3;i++){
@@ -89,29 +87,25 @@ function Start_qna(){
 }
 
 function shareTwitter() {
-    var sendText = "같이 테스트해봐요"; // 전달할 텍스트
-    var sendUrl = window.location.href; // 전달할 URL
+    var sendText = "같이 테스트해봐요";
+    var sendUrl = window.location.href; 
     window.open("https://twitter.com/intent/tweet?text=" + sendText + "&url=" + sendUrl);
 }
 
 function shareFacebook() {
-    var sendUrl = window.location.href; // 전달할 URL
+    var sendUrl = window.location.href;
     window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
 }
 
 function shareKakao() {
- 
-    // 사용할 앱의 JavaScript 키 설정
     Kakao.init('a115a9bb453645c03a291f92a524c7e4');
-   
-    // 카카오링크 버튼 생성
     Kakao.Link.createDefaultButton({
-      container: '#btnKakao', // 카카오공유버튼ID
+      container: '#btnKakao',
       objectType: 'feed',
       content: {
-        title: "만화캐릭터테스트", // 보여질 제목
-        description: "내가 만약 만화캐릭터라면?", // 보여질 설명
-        imageUrl: "https://characterandyou.netlify.app", // 콘텐츠 URL
+        title: "만화캐릭터테스트", 
+        description: "내가 만약 만화캐릭터라면?", 
+        imageUrl: "https://characterandyou.netlify.app",
         link: {
            mobileWebUrl: "https://characterandyou.netlify.app",
            webUrl: "https://characterandyou.netlify.app"
