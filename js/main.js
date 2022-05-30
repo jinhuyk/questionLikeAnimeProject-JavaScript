@@ -93,3 +93,24 @@ function shareFacebook() {
     var sendUrl = window.location.href; // 전달할 URL
     window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
 }
+
+function shareKakao() {
+ 
+    // 사용할 앱의 JavaScript 키 설정
+    Kakao.init('	d24bd3606409edd0534f1456134d8ede');
+   
+    // 카카오링크 버튼 생성
+    Kakao.Link.createDefaultButton({
+      container: '#btnKakao', // 카카오공유버튼ID
+      objectType: 'feed',
+      content: {
+        title: "만화캐릭터테스트", // 보여질 제목
+        description: "내가 만약 만화캐릭터라면?", // 보여질 설명
+        imageUrl: "https://characterandyou.netlify.app/", // 콘텐츠 URL
+        link: {
+           mobileWebUrl: "https://characterandyou.netlify.app/",
+           webUrl: "https://characterandyou.netlify.app/"
+        }
+      }
+    });
+  }
