@@ -66,7 +66,7 @@ function Qna(number){
         var stbtn=""
         for(let i = 0;i<3;i++){
 
-            var ans_btn = '<button id="ansbtn" class="btn btn-primary " type="button">{}</button>'
+            var ans_btn = '<button id="ansbtn" class="btn btn-outline-dark " type="button">{}</button>'
             ans_btn = ans_btn.replace('{}',list[number].ans[i].ans)
             stbtn = stbtn + ans_btn+'\n'
         }
