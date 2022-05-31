@@ -1,5 +1,5 @@
 
-let score=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+let score=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 let main = document.querySelector(".main")
 let qna = document.querySelector(".test")
