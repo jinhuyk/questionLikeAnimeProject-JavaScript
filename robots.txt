@@ -1,0 +1,3 @@
+User-agent: *
+Allow:/
+Sitemap: https://characterandyou.netlify.app/sitemap.xml
